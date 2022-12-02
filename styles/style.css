@@ -39,6 +39,7 @@ body {
 }
 .group{
   margin: 0 15px;
+  float : left;
 }
 
 .group1{
