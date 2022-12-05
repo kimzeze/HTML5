@@ -1,9 +1,14 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./fontello.css);
+
 /* 기본 스타일 */
-*, *::before, *::after{
+*, 
+*::before, 
+*::after{
   box-sizing : border-box;
 }
+
 
 /* 본문 스타일 */
 body {
@@ -21,10 +26,61 @@ body {
 
 /* 헤더 */
 .header{
-  background: pink;
+  background: #fff;
   padding : 0 30px;
   height : 15vh;
+  border-radius : 0 0 15px 15px;
 }
+
+.member{
+  background-color: pink;
+  display : flex;
+  flex-flow : row nowrap;
+  justify-content: flex-end;
+}
+
+/* :before / ::before => first child  */
+/* :after / ::after => first child  */
+
+/* .member -> 10점 , li -> 1점, ::before (typeselector) -> 1점 // 12점 */
+/* .member li::before{
+  content : ":";
+} */
+/* 선택자의 우선순위 규칙 때문에 적용이 안됨 */
+/* .first -> 10점, ::before ->1점 => 11점  -> 1점 */
+/* .first::before{
+  content:"" ;
+} */
+
+/* .member li:first-child:before{
+  content:"" ;
+} */
+
+/* (n+3) -> 3번째부터 뒤로 다 선택하겠다!!!!!! */
+/* (-n+1) -> 1부터 앞쪽으로 다 선택하겠다! */
+/* .member li:nth-child(n+2)::before {
+  content:":";
+  background-color: skyblue;
+} */
+/* odd -> 홀수번째만, even-> 짝수번째만 */
+/* .member li:nth-child(n+2):nth-child(-n+4) {
+  content:":";
+  background-color: yellow;
+} */
+
+/* .member li::before{
+  content: "\e802";
+  font-family: fontello;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+} */
+
+
 /* 비주얼 */
 .visual{
   background: orange;
