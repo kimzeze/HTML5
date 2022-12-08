@@ -29,16 +29,18 @@ a {
 }
 
 /* 본문 스타일 */
+
 body {
-  /* em, rem 단위를 사용해보기 */
-  font-size: 1.4rem;
+    /* em, rem 단위를 사용해보기 */
   color: #212121;
-  background: #ccc
-    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
+  font-size: 1.4rem;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background: url("./images/bg_flower.png") no-repeat 50% 0,
+    #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%)
+      repeat 0 0;
 }
 
 /* 레이아웃 */
@@ -223,26 +225,66 @@ body {
     font-size: 24px;
     color : hsla(0, 0%, 0, 1);
     transform: translate(400px, 75px);
-
   }
 }
 
+
+@keyframes fadeEffect {
+  0%{opacity: 1;}
+  /* 50%{opacity: 0;} */
+  100%{opacity: 0;}
+}
+
 .visual {
-  background: orange;
+  /* background: orange; */
   height: 120px;
   position: relative;
 }
 
-.visual-text{
-  background-color: aqua;
-  /* display:inline-block; */
+.visual::before, .visual::after{
+  /* animation-name: fadeEffect;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
+  
+  content:"";
   position:absolute;
+  width:100%;
+  height : 100%;
+  top:0;
+  left:0;
+  animation : fadeEffect 2000ms infinite alternate;
 
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  animation-name: moveEffect ;
-  animation-duration: 3000ms;
+}
+
+.visual::before{
+  /* background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
+  background-repeat: no-repeat;
+  background-position: 0 -10px, 600px 0; */
+  background: url(./images/ani_flower_01.png) no-repeat 0 -10px, url(./images/ani_flower_02.png) no-repeat 600px 0;
+}
+
+.visual::after{
+  background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
+  background-repeat: no-repeat;
+  background-position: 300px 0px, 800px 0;
+  animation-delay: 1000ms;
+}
+
+
+.visual-text{
+  /* background-color: aqua; */
+  /* animation-name: moveEffect ;
+  animation-duration: 400ms;
   animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
+  
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  animation: moveEffect 400ms ease-in-out forwards;
+
+  /* display:inline-block; */
+  position:relative;
+  z-index: 1;
 }
 
 
