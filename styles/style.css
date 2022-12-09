@@ -347,27 +347,31 @@ body {
   width:90px;
   height : 24px;
   border :1px solid #aaa;
-  padding : 5px;
-  border-radius: 5px;
+  padding : 1px 1px 1px 5px;
+  border-radius: 3px;
 }
 
 .login-form fieldset{
   position:relative;
+  border-bottom: 1px solid #212121;
   padding-bottom: 10px;
-  border-bottom: #000 solid 1px;
+}
+
+.user-email, .user-pw{
+  margin-bottom: 5px;
 }
 
 .login-button{
   position: absolute;
   top:0px;
   right:0px;
-  width:60px;
-  height: 50px;
-  padding: 0;
-  background-color: orange;
+  height: 53px;
+  padding: 8px;
+  background-color: orangered;
   border-radius: 5px;
-  border: orange;
+  border: 0;
   color:#fff;
+  font-size: 13px;
 }
 
 .sign{
