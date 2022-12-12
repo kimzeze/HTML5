@@ -514,8 +514,9 @@ body {
 }
 
 .form-group-label{
-  white-space: nowrap;
+  /* white-space: nowrap; */
   margin-right : 10px;
+  flex-shrink: 0;
 }
 
 .form-group-input{
@@ -530,7 +531,8 @@ body {
 }
 
 .search-button {
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  flex-shrink: 0;
   background-color: black;
   color:white;
   height : 24px;
@@ -547,6 +549,7 @@ body {
   height: 10vh;
   clear: both;
 }
+
 /* 푸터 */
 .footer {
   background: #ccc
