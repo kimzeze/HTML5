@@ -444,25 +444,29 @@ body {
 }
 
 .term-list{
-  background-color: yellow;
-  margin-top:10px;
+  /* background-color: yellow; */
+  margin-top: 10px;
 }
 
 .term-list div{
-  background-color: pink;
-  margin-top:10px;
+  /* background-color: pink; */
+  margin-top: 10px;
   display : flow-root;
 }
 
-.term-list-subject{
-  background:lime;
-  float:right;
+.term-list-brief ,.term-list-subject{
   width: 145px;
-  color : blue;
+  float: right;
+}
+
+.term-list-subject{
+  /* background:lime; */
+  color : #296897;
+  font-weight: 500;
 }
 
 .term-list-thumnail{
-  background: purple;
+  /* background: purple; */
   float:left;
 }
 
@@ -471,12 +475,19 @@ body {
 }
 
 .term-list-brief{
-  background:coral;
-  float:right;
-  width: 145px;
+  /* background:coral; */
+  margin-top: 5px;
+  line-height: 1.5;
 }
 
+.cross .term-list-subject,
+.cross .term-list-brief{
+  float : left;
+}
 
+.cross .term-list-thumnail{
+  float:right;
+}
 
 /* 슬로건 */
 .slogan {
