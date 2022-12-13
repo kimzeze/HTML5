@@ -32,7 +32,7 @@ a {
 
 /* 본문 스타일 */
 body {
-    /* em, rem 단위를 사용해보기 */
+  /* em, rem 단위를 사용해보기 */
   font-size: 1.4rem;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
@@ -405,64 +405,65 @@ body {
 }
 
 /* 웹 관련 용어 */
-.term{
+.term {
   background: #ccc linear-gradient(to bottom, #ccc, #eee);
   margin-top: 20px;
-  border : 1px solid #aaa;
+  border: 1px solid #aaa;
   border-radius: 5px;
-  padding : 10px 15px;
-  overflow : hidden;
+  padding: 10px 15px;
+  overflow: hidden;
 }
 
-.term-title{
+.term-title {
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.term-list{
+.term-list {
   /* background-color: yellow; */
   margin-top: 10px;
 }
 
-.term-list div{
+.term-list div {
   /* background-color: pink; */
   margin-top: 10px;
-  display : flow-root;
+  display: flow-root;
 }
 
-.term-list-brief ,.term-list-subject{
+.term-list-brief,
+.term-list-subject {
   width: 145px;
   float: right;
 }
 
-.term-list-subject{
+.term-list-subject {
   /* background:lime; */
-  color : #296897;
+  color: #296897;
   font-weight: 500;
 }
 
-.term-list-thumnail{
+.term-list-thumnail {
   /* background: purple; */
-  float:left;
+  float: left;
 }
 
-.term-list-thumnail img{
+.term-list-thumnail img {
   vertical-align: middle;
 }
 
-.term-list-brief{
+.term-list-brief {
   /* background:coral; */
   margin-top: 5px;
   line-height: 1.5;
 }
 
 .cross .term-list-subject,
-.cross .term-list-brief{
-  float : left;
+.cross .term-list-brief {
+  float: left;
 }
 
-.cross .term-list-thumnail{
-  float:right;
+.cross .term-list-thumnail {
+  float: right;
 }
 
 /* 검색 폼 */
@@ -511,79 +512,140 @@ body {
   font-size: 1.2rem;
 }
 
-
 /* 공지사항 및 자료실 */
-.board{
+.board {
   /* background-color: yellow; */
-  margin-top:20px;
-  display :flow-root;
+  margin-top: 20px;
+  display: flow-root;
   position: relative;
 }
 
-.tab-list{
+.tab-list {
   display: flex;
   flex-flow: row nowrap;
 }
 
-.tab{
-  border:1px solid #aaa;
+.tab {
+  border: 1px solid #aaa;
   background-color: #ccc;
   border-radius: 5px 5px 0 0;
-  padding : 5px 10px;
+  padding: 5px 10px;
   color: #666;
 }
 
-.is-select.tab{
+.is-select.tab {
   background-color: #fff;
   color: #e85e2c;
   border-color: currentColor currentColor #fff currentColor;
 }
 
-
-.tab-panel{
-  display:none;
+.tab-panel {
+  display: none;
   /* background-color: pink; */
-  margin-top:15px;
+  margin-top: 15px;
 }
 
-.is-select.tab-panel{
+.is-select.tab-panel {
   display: block;
 }
 
-.board-list li{
+.board-list li {
   /* background-color: skyblue; */
   margin-top: 10px;
-  display:flex;
+  display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
 
-.board-list a{
+.board-list a {
   flex-grow: 1;
   /* background-color: salmon; */
   white-space: nowrap;
-  overflow:hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.board-list time{
+.board-list time {
   flex-shrink: 0;
-  margin-left : 10px;
+  margin-left: 10px;
 }
 
-.board-more{
+.board-more {
   /* background-color: skyblue; */
   position: absolute;
-  top:-8px;
-  right:-8px;
-  padding:8px;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
 }
 
-.icon-plus::before{
-  color:hsla(110, 50%, 30%, 1)
+.icon-plus::before {
+  color: hsla(110, 50%, 30%, 1);
 }
 
+/* 새소식 */
 
+.news {
+  margin-top: 20px;
+  position: relative;
+}
+
+.news::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #aaa linear-gradient(to right, #ccc, #fff);
+}
+
+.news-title {
+  color: #e85e2c;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.news-link {
+  display: block;
+}
+
+.news-item {
+  margin-top: 35px;
+  padding-left: 130px;
+  position: relative;
+}
+
+.news-item-title {
+  right: 0;
+  font-weight: 500;
+}
+
+.news-item-date {
+  margin: 5px 0 10px;
+  display: block;
+}
+.news-item-brief {
+  line-height: 1.5;
+}
+
+.news-item-thumbnail {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  text-align: center;
+}
+
+.news-more {
+  /* background-color: skyblue; */
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+figcaption {
+  padding-top: 15px;
+}
 
 /* 슬로건 */
 .slogan {
